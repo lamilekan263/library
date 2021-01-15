@@ -5,12 +5,14 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Lato", "system-ui"],
-       
       },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      borderStyle: ["hover", "focus"],
+      textColor: ["responsive", "hover", "focus", "group-hover"],
+    },
   },
   plugins: [],
 };
