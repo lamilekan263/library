@@ -41,7 +41,7 @@ const Login = () => {
                   name=""
                   id="email"
                   placeholder="Your Email "
-                  className="w-full px-4 py-2 mt-2 text-base text-green-700 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0 "
+                  className="w-full px-4 py-2 mt-2 text-base text-green-700 bg-gray-100 border-transparent rounded-lg focus:border-green-500 focus:bg-white focus:ring-0 "
                   autofocus
                   autocomplete
                   required
@@ -60,7 +60,7 @@ const Login = () => {
                   id="password"
                   placeholder="Your Password"
                   minlength="6"
-                  className="w-full px-4 py-2 text-base text-green-700 bg-gray-100 border-transparent rounded-lg focus:border-gray-500 focus:bg-white focus:ring-0"
+                  className="w-full px-4 py-2 text-base text-green-700 bg-gray-100 border-transparent rounded-lg focus:border-green-500 focus:bg-white focus:ring-0"
                   required
                 />
               </div>
