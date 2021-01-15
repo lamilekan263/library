@@ -22,13 +22,13 @@ const Login = () => {
               <img
                 src="https://fmcabeokuta.net/wp-content/uploads/LOGO-150x150.jpg"
                 alt="logo"
-                className="h-12 md:h-16"
+                className="hidden md:block h-12 md:h-16"
               />
             </Link>
-            <h1 className="mt-12 text-2xl font-semibold tracking-tighter text-green-700 sm:text-3xl title-font">
+            <h1 className="mt-0 md:mt-12 text-2xl font-semibold tracking-tighter text-green-700 sm:text-3xl title-font">
               Log in to your account
             </h1>
-            <form className="mt-6" action="#" method="POST">
+            <form className="md:mt-6" action="#" method="POST">
               <div>
                 <label
                   htmlFor="email"
@@ -42,8 +42,8 @@ const Login = () => {
                   id="email"
                   placeholder="Your Email "
                   className="w-full px-4 py-2 mt-2 text-base text-green-700 bg-gray-100 border-transparent rounded-lg focus:border-green-500 focus:bg-white focus:ring-0 "
-                  autofocus
-                  autocomplete
+                  autoFocus
+                  autoComplete="true"
                   required
                 />
               </div>
@@ -59,7 +59,7 @@ const Login = () => {
                   name=""
                   id="password"
                   placeholder="Your Password"
-                  minlength="6"
+                  minLength="6"
                   className="w-full px-4 py-2 text-base text-green-700 bg-gray-100 border-transparent rounded-lg focus:border-green-500 focus:bg-white focus:ring-0"
                   required
                 />

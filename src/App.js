@@ -1,5 +1,6 @@
-import React, { Suspense, lazy} from 'react';
+import React, {useEffect, useState, Suspense, lazy} from 'react';
 import { Route, Switch } from 'react-router-dom'
+import Menu from './components/menu/Menu';
 
 // import Footer from "./components/footer/Footer";
 import Nav from "./components/Nav/Nav";
@@ -14,10 +15,25 @@ const Register = lazy(() => import("./Views/auth/Register"));
 
 
 function App() {
+   const [menuOpen, isMenuOpen] = useState(false);
+
+   const menuController = () => isMenuOpen(!menuOpen);
+
+   useEffect(() => {
+     const menuCheck = () => {
+       if (window.innerWidth > 760) {
+         isMenuOpen(false);
+       }
+     };
+     window.addEventListener("resize", menuCheck);
+
+     return () => window.removeEventListener("resize", menuCheck);
+   }, [isMenuOpen]);
   return (
     <Suspense fallback={<div>Loading....</div>}>
       <div className="App">
-        <Nav />
+        <Nav menu={menuController} />
+        <Menu isMenuOpen={menuOpen} menu={menuController} />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/services" component={Service} />
