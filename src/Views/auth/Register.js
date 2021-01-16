@@ -4,7 +4,7 @@ import BookReading from '../../assets/img/bookReading.jpeg'
 
 const Register = () => {
     return (
-      <section className="flex flex-col my-7 h-screen md:flex-row">
+      <section className="flex flex-col my-7 md:h-screen md:flex-row">
         <div className="container mx-auto">
           <div className="flex justify-center px-2 py-6 ">
             <div className="flex w-full rounded-lg xl:w-3/4 lg:w-11/12 lg:shadow-xl ">
@@ -33,9 +33,12 @@ const Register = () => {
                     <img
                       src="https://fmcabeokuta.net/wp-content/uploads/LOGO-150x150.jpg"
                       alt="logo"
-                      className="h-12 md:h-16"
+                      className="hidden md:block h-12 md:h-16"
                     />
                   </Link>
+                  <h1 className="my-5 md:mt-12 text-2xl md:hidden font-semibold tracking-tighter text-green-700 sm:text-3xl title-font">
+                    Create an account.
+                  </h1>
                   <form className="mt-6" action="#" method="POST">
                     <div>
                       <label className="block text-base font-medium leading-relaxed text-gray-700">
@@ -105,7 +108,7 @@ const Register = () => {
                       type="submit"
                       className="block w-full px-4 py-3 mt-6 font-semibold text-white transition duration-500 ease-in-out transhtmlForm rounded-lg bg-gradient-to-r from-green-700 hover:from-green-500 to-green-500 hover:to-green-700 focus:shadow-outline focus:outline-none"
                     >
-                      Log In
+                     Sign Up
                     </button>
                   </form>
                   <p className="mt-8 text-center">

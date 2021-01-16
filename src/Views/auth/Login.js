@@ -5,15 +5,15 @@ import  bookShelfs  from '../../assets/img/lib.jpeg';
 
 const Login = () => {
     return (
-      <section className="flex flex-col items-center h-screen md:flex-row ">
-        <div className="hidden w-full h-screen bg-black lg:block md:w-1/3 xl:w-2/3">
+      <section className="flex flex-col items-center md:h-screen md:flex-row ">
+        <div className="hidden w-full md:h-screen bg-black lg:block md:w-1/3 xl:w-2/3">
           <img
             src={bookShelfs}
             alt=""
             className="object-cover overlay opacity-40 w-full h-full"
           />
         </div>
-        <div className="flex items-center justify-center w-full h-screen px-6 bg-green-1300 md:max-w-md lg:max-w-full md:mx-auto md:w-1/2 xl:w-1/3 lg:px-16 xl:px-12">
+        <div className="flex items-center justify-center w-full md:h-screen px-6 bg-green-1300 md:max-w-md lg:max-w-full md:mx-auto md:w-1/2 xl:w-1/3 lg:px-16 xl:px-12">
           <div className="w-full h-100">
             <Link
               to="#"
@@ -25,7 +25,7 @@ const Login = () => {
                 className="hidden md:block h-12 md:h-16"
               />
             </Link>
-            <h1 className="mt-0 md:mt-12 text-2xl font-semibold tracking-tighter text-green-700 sm:text-3xl title-font">
+            <h1 className="my-5 md:mt-12 text-2xl font-semibold tracking-tighter text-green-700 sm:text-3xl title-font">
               Log in to your account
             </h1>
             <form className="md:mt-6" action="#" method="POST">
