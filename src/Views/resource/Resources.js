@@ -39,8 +39,6 @@ const Resources = () => {
               <a
                 href={resource.url}
                 key={resource.id}
-                target="_blank"
-                rel="noreferrer"
                 className="p-5 bg-green-700 text-white mt-4 md:ml-3 h-64 rounded-lg flex items-center justify-center hover:bg-green-900 cursor-pointer"
               >
                 {resource.title}

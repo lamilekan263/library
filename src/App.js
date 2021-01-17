@@ -4,6 +4,7 @@ import Menu from './components/menu/Menu';
 
 // import Footer from "./components/footer/Footer";
 import Nav from "./components/Nav/Nav";
+import SpinnerComponent from './components/spinner/Spinner';
 
 
 const Home = lazy(() => import("./Views/Home/Home"));
@@ -31,7 +32,7 @@ function App() {
      return () => window.removeEventListener("resize", menuCheck);
    }, [isMenuOpen]);
   return (
-    <Suspense fallback={<div>Loading....</div>}>
+    <Suspense fallback={<SpinnerComponent/>}>
       <div className="App">
         <Nav menu={menuController} />
         <Menu isMenuOpen={menuOpen} menu={menuController} />
