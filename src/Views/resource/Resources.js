@@ -39,7 +39,7 @@ const Resources = () => {
               <a
                 href={resource.url}
                 key={resource.id}
-                className="p-5 bg-gradient-to-r from-green-900 via-green-700 to-green-500 text-white mt-4 md:ml-3 h-64 rounded-lg flex items-center justify-center hover:bg-green-900 cursor-pointer"
+                className="p-5 bg-gradient-to-r from-green-900 via-green-700 to-green-500  text-white mt-4 md:ml-3 h-64 rounded-lg flex items-center justify-center hover:bg-green-900 cursor-pointer "
               >
                 {resource.title}
               </a>
