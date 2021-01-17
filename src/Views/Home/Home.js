@@ -200,8 +200,8 @@ const Home = () => {
         {/* Testimonial Section starts here*/}
         <section className="my-10 body-font">
           <div className="flex flex-col text-center items-center justify-center">
-            <h1 className="text-green-700 text-2xl text-bold">Testimonials</h1>
-            <h1 className="text-green-700 text-4xl text-bold">What people are saying about us</h1>
+            <h1 className="text-green-700 text-md lg:text-2xl text-bold">Testimonials</h1>
+            <h1 className="text-green-700 text-lg lg:text-4xl text-bold">What people are saying about us</h1>
             <span className="h-1 w-20 block mt-4 bg-green-700"></span>
           </div>
           <Testimonial />
