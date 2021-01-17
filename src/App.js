@@ -6,9 +6,9 @@ import Menu from './components/menu/Menu';
 import Nav from "./components/Nav/Nav";
 
 
-const Home = lazy(() => import("./Views/Home"));
+const Home = lazy(() => import("./Views/Home/Home"));
 const Contact = lazy(() => import("./Views/Contact"));
-const Service = lazy(() => import("./Views/Service"));
+const Service = lazy(() => import("./Views/Service/Service"));
 const Opac = lazy(() => import("./Views/Opac"));
 const Login = lazy(() => import("./Views/auth/Login"));
 const Register = lazy(() => import("./Views/auth/Register"));

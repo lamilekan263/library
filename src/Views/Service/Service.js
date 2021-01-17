@@ -1,5 +1,5 @@
 import React from 'react'
-import BackgroundImage from '../assets/img/schoolImage.jpg'
+import BackgroundImage from '../../assets/img/schoolImage.jpg'
 import { Link } from 'react-router-dom'
 
 const Service = () => {
