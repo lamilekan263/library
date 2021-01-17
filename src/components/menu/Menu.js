@@ -26,8 +26,6 @@ const Menu = ({isMenuOpen, menu}) => {
         <a
           href="https://www.who.int/hinari/en/"
           className="m-2 mr-5 text-md font-semibold text-gray-600 hover:text-green-800"
-          target="_blank"
-          rel="noreferrer"
         >
           Hinary
         </a>
