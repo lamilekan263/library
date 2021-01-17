@@ -80,7 +80,7 @@ const Home = () => {
         <section className="bg-green-700 text-gray-700 body-font">
           <div className="container px-8 pt-8 mx-auto lg:px-48">
             <div className="flex flex-wrap ">
-              <div className="px-8 py-6 mx-auto lg:px-10 lg:w-1/2 md:w-full shadow-lg">
+              <div className=" lg:px-10 lg:w-1/2 md:w-full shadow-lg">
                 <div className="h-full px-4 py-6 border rounded-xl bg-white">
                   <h3 className="tracking-widest text-green-700">Free Plan</h3>
                   <h2 className="flex items-center justify-start mt-2 mb-4 text-3xl font-bold leading-none text-left text-green-700 lg:text-6xl">
@@ -129,7 +129,7 @@ const Home = () => {
                   </button>
                 </div>
               </div>
-              <div className="px-8 py-6 mx-auto lg:px-10 lg:w-1/2 md:w-full shadow-lg">
+              <div className=" my-5 md:my-0 mx-auto lg:px-10 lg:w-1/2 md:w-full shadow-lg">
                 <div className="h-full px-4 py-6 border rounded-xl shadow-lg">
                   <h3 className="tracking-widest text-white">PRO</h3>
                   <h2 className="flex items-center justify-start mt-2 mb-4 text-3xl font-bold leading-none text-left text-white lg:text-6xl">
