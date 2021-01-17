@@ -19,12 +19,16 @@ const Home = () => {
                 Company Name
               </h2>
               <h1 className="mb-8 text-2xl font-bold tracking-tighter text-center text-green-800 lg:text-left lg:text-5xl title-font">
-                Welcome to Our Library
+                Welcome to Our Medical Library
               </h1>
+              <p className="mb-3 text-base leading-relaxed text-center text-gray-700 lg:text-left lg:text-1xl">
+                Get medical resources both Online and Offline
+              </p>
               <p className="mb-8 text-base leading-relaxed text-center text-gray-700 lg:text-left lg:text-1xl">
-                Browse from the largest collection of ebooks. Read stories from
+                Browse from the largest collection of medical books. Read from
                 anywhere, at anytime.
               </p>
+
               <div className="flex justify-center">
                 <Link
                   to="#"
@@ -200,8 +204,12 @@ const Home = () => {
         {/* Testimonial Section starts here*/}
         <section className="my-10 body-font">
           <div className="flex flex-col text-center items-center justify-center">
-            <h1 className="text-green-700 text-md lg:text-2xl text-bold">Testimonials</h1>
-            <h1 className="text-green-700 text-lg lg:text-4xl text-bold">What people are saying about us</h1>
+            <h1 className="text-green-700 text-md lg:text-2xl text-bold">
+              Testimonials
+            </h1>
+            <h1 className="text-green-700 text-lg lg:text-4xl text-bold">
+              What people are saying about us
+            </h1>
             <span className="h-1 w-20 block mt-4 bg-green-700"></span>
           </div>
           <Testimonial />

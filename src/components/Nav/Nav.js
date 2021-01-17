@@ -46,17 +46,19 @@ const Nav = ({ menu }) => {
           >
             Opac
           </NavLink>
-          <NavLink
-            to="#"
+          <a
+            href="https://www.who.int/hinari/en/"
             className="mr-5 text-md font-semibold text-gray-600 hover:text-green-800"
+            target="_blank"
+            rel="noreferrer"
           >
             Hinary
-          </NavLink>
+          </a>
           <NavLink
-            to="#"
+            to="/resources/free"
             className="mr-5 text-md font-semibold text-gray-600 hover:text-green-800"
           >
-            Free Resources
+            Free Medical Resources
           </NavLink>
           <NavLink
             to="/services"

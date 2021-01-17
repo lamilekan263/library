@@ -12,6 +12,7 @@ const Service = lazy(() => import("./Views/Service/Service"));
 const Opac = lazy(() => import("./Views/Opac"));
 const Login = lazy(() => import("./Views/auth/Login"));
 const Register = lazy(() => import("./Views/auth/Register"));
+const Resources = lazy(() => import("./Views/resource/Resources"));
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
           <Route exact path="/user/login" component={Login} />
           <Route exact path="/user/register" component={Register} />
           <Route exact path="/resources/opac" component={Opac} />
+          <Route exact path="/resources/free" component={Resources} />
         </Switch>
       </div>
     </Suspense>

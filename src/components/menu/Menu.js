@@ -11,25 +11,48 @@ const Menu = ({isMenuOpen, menu}) => {
         }
         onClick={menu}
       >
-        <Link to='/' className="m-2 mr-5 text-md font-semibold text-gray-600 hover:text-green-800">
+        <Link
+          to="/"
+          className="m-2 mr-5 text-md font-semibold text-gray-600 hover:text-green-800"
+        >
           Home
         </Link>
-        <Link to="/resources/opac" className="m-2 mr-5 text-md font-semibold text-gray-600 hover:text-green-800">
+        <Link
+          to="/resources/opac"
+          className="m-2 mr-5 text-md font-semibold text-gray-600 hover:text-green-800"
+        >
           Opac
         </Link>
-        <Link to="#" className="m-2 mr-5 text-md font-semibold text-gray-600 hover:text-green-800">
+        <a
+          href="https://www.who.int/hinari/en/"
+          className="m-2 mr-5 text-md font-semibold text-gray-600 hover:text-green-800"
+          target="_blank"
+          rel="noreferrer"
+        >
           Hinary
+        </a>
+        <Link
+          to="/resources/free"
+          className="m-2 mr-5 text-md font-semibold text-gray-600 hover:text-green-800"
+        >
+          Free Medical Resources
         </Link>
-        <Link to="#" className="m-2 mr-5 text-md font-semibold text-gray-600 hover:text-green-800">
-          Free Resources
-        </Link>
-        <Link to="/services" className="m-2 mr-5 text-md font-semibold text-gray-600 hover:text-green-800">
+        <Link
+          to="/services"
+          className="m-2 mr-5 text-md font-semibold text-gray-600 hover:text-green-800"
+        >
           Services
         </Link>
-        <Link to="#" className="m-2 mr-5 text-md font-semibold text-gray-600 hover:text-green-800">
+        <Link
+          to="#"
+          className="m-2 mr-5 text-md font-semibold text-gray-600 hover:text-green-800"
+        >
           About
         </Link>
-        <Link to="/contact" className="m-2 mr-5 text-md font-semibold text-gray-600 hover:text-green-800">
+        <Link
+          to="/contact"
+          className="m-2 mr-5 text-md font-semibold text-gray-600 hover:text-green-800"
+        >
           Contact
         </Link>
         <Link to="/user/login">
