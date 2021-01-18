@@ -16,7 +16,7 @@ const Nav = ({ menu }) => {
             className="h-12 md:h-16"
           />
         </Link>
-        <div className="md:hidden" onClick={menu}>
+        <div className="lg:hidden" onClick={menu}>
           <svg
             className="w-6 h-6"
             fill="none"
@@ -32,10 +32,11 @@ const Nav = ({ menu }) => {
             />
           </svg>
         </div>
-        <nav className="hidden md:flex flex-wrap items-center justify-center text-base ">
+        <nav className="hidden lg:flex flex-wrap items-center justify-center text-base ">
           <NavLink
             to="/"
             className="mr-5 text-md font-semibold text-gray-600 lg:ml-24 hover:text-green-800 "
+            activeClassName="border-b-2 border-green-900"
           >
             Home
           </NavLink>
@@ -43,24 +44,28 @@ const Nav = ({ menu }) => {
           <NavLink
             to="/resources/opac"
             className="mr-5 text-md font-semibold text-gray-600 hover:text-green-800"
+            activeClassName="border-b-2 border-green-900"
           >
             Opac
           </NavLink>
           <a
             href="https://www.who.int/hinari/en/"
             className="mr-5 text-md font-semibold text-gray-600 hover:text-green-800"
+            activeClassName="border-b-2 border-green-900"
           >
             Hinary
           </a>
           <NavLink
             to="/resources/free"
             className="mr-5 text-md font-semibold text-gray-600 hover:text-green-800"
+            activeClassName="border-b-2 border-green-900"
           >
             Free Medical Resources
           </NavLink>
           <NavLink
             to="/services"
             className="mr-5 text-md font-semibold text-gray-600 hover:text-green-800"
+            activeClassName="border-b-2 border-green-900"
           >
             Services
           </NavLink>
@@ -73,11 +78,12 @@ const Nav = ({ menu }) => {
           <NavLink
             to="/contact"
             className="mr-5 text-md font-semibold text-gray-600 hover:text-green-800"
+            activeClassName="border-b-2 border-green-900"
           >
             Contact
           </NavLink>
         </nav>
-        <div className="hidden md:flex ml-auto">
+        <div className="hidden lg:flex ml-auto">
           <Link to="/user/login">
             <button className="items-center px-8  animate-bounce py-3 mt-4 ml-5 font-semibold text-white transition duration-500 ease-in-out transform bg-green-700 border rounded-lg lg:inline-flex lg:mt-px hover:border-blue hover:bg-white hover:text-green-700 focus:ring focus:outline-none">
               Sign In

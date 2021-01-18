@@ -81,7 +81,7 @@ const Home = () => {
 
         <section className="bg-green-700 text-gray-700 body-font">
           <div className="container px-8 py-8 mx-auto lg:px-48">
-            <div className="flex flex-wrap ">
+            <div className="md:grid grid-cols-6 grid-gap-auto ">
               <div className=" lg:px-10 lg:w-1/2 md:w-full shadow-lg">
                 <div className="h-full px-4 py-6 border rounded-xl bg-white">
                   <h3 className="tracking-widest text-green-700">Free Plan</h3>
