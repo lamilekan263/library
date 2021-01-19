@@ -36,12 +36,26 @@ const Resources = () => {
         <div className="md:grid grid-cols-3 gap-4  justify-center items-center text-center">
           {resourceLinks.map((resource) => {
             return (
-              <a
-                href={resource.url}
-                key={resource.id}
-                className="p-5 bg-gradient-to-r from-green-900 via-green-700 to-green-500  text-white mt-4 md:ml-3 h-64 rounded-lg flex items-center justify-center shadow-2xl hover:bg-green-900 cursor-pointer "
-              >
-                {resource.title}
+              <a href={resource.url} key={resource.id}>
+                <div className="p-5 bg-gradient-to-r from-green-900 via-green-700 to-green-500  text-white mt-4 md:ml-3 h-64 rounded-lg flex flex-col items-center justify-center shadow-2xl hover:bg-green-900 cursor-pointer ">
+                  
+                    <svg
+                      className="w-10 h-10"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
+                  
+                  <h1>{resource.title}</h1>
+                </div>
               </a>
             );
           })}

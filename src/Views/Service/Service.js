@@ -136,7 +136,7 @@ const Service = () => {
           </div>
         </section>
 
-        <section className="pb-20 relative block bg-green-600">
+        <section className=" relative block bg-green-600">
           <div
             className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
             style={{ transform: "translateZ(0)" }}

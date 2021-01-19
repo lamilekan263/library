@@ -1,8 +1,10 @@
 import React from 'react'
 import Globe from '../assets/img/globe.jpeg'
+import Footer from '../components/footer/Footer'
 
 const Contact = () => {
     return (
+      <div>
       <section className="flex flex-col mt-5 items-center h-screen md:flex-row">
         <div className="container mx-auto">
           <div className="flex justify-center px-2 py-6 ">
@@ -22,8 +24,8 @@ const Contact = () => {
                         <div className="w-full px-3 mb-6  md:mb-0">
                           <label
                             className="text-sm font-medium leading-relaxed tracking-tighter text-gray-700"
-                            for="name"
-                            minlength="6"
+                            htmlFor="name"
+                            minLength="6"
                           >
                             Your Name
                           </label>
@@ -37,7 +39,7 @@ const Contact = () => {
                         <div className="w-full px-3 ">
                           <label
                             className="text-sm font-medium leading-relaxed tracking-tighter text-gray-700"
-                            for="email"
+                            htmlFor="email"
                           >
                             Email
                           </label>
@@ -51,7 +53,7 @@ const Contact = () => {
                         <div className="w-full px-3">
                           <label
                             className="text-sm font-medium leading-relaxed tracking-tighter text-gray-700"
-                            for="textarea"
+                            htmlFor="textarea"
                           >
                             Message
                           </label>
@@ -82,6 +84,8 @@ const Contact = () => {
           </div>
         </div>
       </section>
+        <Footer />
+      </div>
     );
 }
 

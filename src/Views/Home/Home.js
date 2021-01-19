@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import AOS from "aos";
 import { Link } from 'react-router-dom'
 import Testimonial from './Testimonial';
+import Footer from '../../components/footer/Footer';
 
 const Home = () => {
   useEffect(() => {
@@ -81,7 +82,7 @@ const Home = () => {
 
         <section className="bg-green-700 text-gray-700 body-font">
           <div className="container px-8 py-8 mx-auto lg:px-48">
-            <div className="md:grid grid-cols-6 grid-gap-auto ">
+            <div className="md:flex items-center justify-center ">
               <div className=" lg:px-10 lg:w-1/2 md:w-full shadow-lg">
                 <div className="h-full px-4 py-6 border rounded-xl bg-white">
                   <h3 className="tracking-widest text-green-700">Free Plan</h3>
@@ -92,7 +93,7 @@ const Home = () => {
                   <p className="mb-4 text-base leading-relaxed text-green-700">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                     Doloribus earum, suscipit odio labore aliquid totam nostrum
-                    maxime! .
+                    maxime!
                   </p>
                   <p className="flex items-center mb-2 text-green-700">
                     <span className="inline-flex items-center justify-center flex-shrink-0 w-4 h-4 mr-2 text-white bg-green-700 rounded-full">
@@ -202,7 +203,7 @@ const Home = () => {
 
         {/* pricing section ends here */}
         {/* Testimonial Section starts here*/}
-        <section className="my-10 body-font">
+        <section className="pt-36 body-font">
           <div className="flex flex-col text-center items-center justify-center">
             <h1 className="text-green-700 text-md lg:text-2xl text-bold">
               Testimonials
@@ -216,6 +217,7 @@ const Home = () => {
         </section>
 
         {/* Testimonial section ends here */}
+          <Footer />
       </div>
     );
 }
