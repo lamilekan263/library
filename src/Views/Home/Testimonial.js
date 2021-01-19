@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -20,13 +21,13 @@ const Testimonial = () => {
                   blunt. Pressure flip Streetstyle in Tempe mute-air judo air
                   backside fastplant yeah. ".
                 </p>
-                <a className="flex flex-wrap items-center mt-6">
+                <Link to="#" className="flex flex-wrap items-center mt-6">
                   <img
                     alt="testimonial"
                     className="inline-block object-cover object-center w-16 h-16 mb-4 rounded-full bg-4gray-100"
                     src="https://dummyimage.com/302x302/94a3b8/ffffff"
                   />
-                </a>
+                </Link>
                 <span className="flex flex-col flex-grow ">
                   <span className="font-medium text-gray-900 title-font">
                     Jakko Svensson
@@ -47,13 +48,13 @@ const Testimonial = () => {
                   blunt. Pressure flip Streetstyle in Tempe mute-air judo air
                   backside fastplant yeah. ".
                 </p>
-                <a className="flex flex-wrap items-center mt-6" href="#">
+                <Link to="#" className="flex flex-wrap items-center mt-6" >
                   <img
                     alt="testimonial"
                     className="inline-block object-cover object-center w-16 h-16 mb-4 rounded-full bg-4gray-100"
                     src="https://dummyimage.com/302x302/94a3b8/ffffff"
                   />
-                </a>
+                </Link>
                 <span className="flex flex-col flex-grow ">
                   <span className="font-medium text-gray-900 title-font">
                     Mike Taissöön
@@ -74,13 +75,13 @@ const Testimonial = () => {
                   blunt. Pressure flip Streetstyle in Tempe mute-air judo air
                   backside fastplant yeah. ".
                 </p>
-                <a className="flex flex-wrap items-center mt-6" href="#">
+                <Link className="flex flex-wrap items-center mt-6" to="#">
                   <img
                     alt="testimonial"
                     className="inline-block object-cover object-center w-16 h-16 mb-4 rounded-full bg-4gray-100"
                     src="https://dummyimage.com/302x302/94a3b8/ffffff"
                   />
-                </a>
+                </Link>
                 <span className="flex flex-col flex-grow ">
                   <span className="font-medium text-gray-900 title-font">
                     Sanna Ristola
