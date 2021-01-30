@@ -1,11 +1,10 @@
-import React from 'react'
+import { combineReducers } from "redux";
 
-const rootReducers = () => {
-    return (
-        <div>
-            
-        </div>
-    )
-}
+import AuthReducer from "./auth/authReducer";
+import profileReducer from './profileReducer';
 
-export default rootReducers
+
+export default combineReducers({
+  auth: AuthReducer,
+  profile: profileReducer,
+});
