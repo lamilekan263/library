@@ -7,6 +7,7 @@ import Nav from "./components/Nav/Nav";
 import SpinnerComponent from './components/spinner/Spinner';
 
 
+
 const Home = lazy(() => import("./Views/Home/Home"));
 const Contact = lazy(() => import("./Views/Contact"));
 const Service = lazy(() => import("./Views/Service/Service"));
@@ -15,7 +16,7 @@ const Login = lazy(() => import("./Views/auth/Login"));
 const Register = lazy(() => import("./Views/auth/Register"));
 const Resources = lazy(() => import("./Views/resource/Resources"));
 
-
+const Admin = lazy(() => import("./Views/admin/Admin"));
 
 function App() {
    const [menuOpen, isMenuOpen] = useState(false);
@@ -35,8 +36,8 @@ function App() {
   return (
     <Suspense fallback={<SpinnerComponent />}>
       <div className="App">
-        <Nav menu={menuController} />
-        <Menu isMenuOpen={menuOpen} menu={menuController} />
+        {/* <Nav menu={menuController} />
+        <Menu isMenuOpen={menuOpen} menu={menuController} /> */}
         <Switch>
           <Route exact path="/services" component={Service} />
           <Route exact path="/contact" component={Contact} />
@@ -44,10 +45,9 @@ function App() {
           <Route exact path="/user/register" component={Register} />
           <Route exact path="/resources/opac" component={Opac} />
           <Route exact path="/resources/free" component={Resources} />
-         
+          <Route path="/admin" component={Admin} />
           <Route exact path="/" component={Home} />
         </Switch>
-      
       </div>
     </Suspense>
   );

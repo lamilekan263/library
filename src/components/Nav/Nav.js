@@ -42,7 +42,7 @@ const Nav = ({ menu }) => {
             Home
           </NavLink>
 
-          <NavLink
+          {/* <NavLink
             to="/resources/opac"
             className="mr-5 text-md font-semibold text-gray-600 hover:text-green-800"
             activeclassname="border-b-2 border-green-900"
@@ -55,13 +55,13 @@ const Nav = ({ menu }) => {
             activeclassname="border-b-2 border-green-900"
           >
             Hinary
-          </a>
+          </a> */}
           <NavLink
             to="/resources/free"
             className="mr-5 text-md font-semibold text-gray-600 hover:text-green-800"
             activeclassname="border-b-2 border-green-900"
           >
-            Free Medical Resources
+           Resources
           </NavLink>
           <NavLink
             to="/services"

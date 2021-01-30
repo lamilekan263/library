@@ -16,8 +16,8 @@ const Home = () => {
               data-aos="fade-right"
               className="flex flex-col items-center w-full pt-0 mb-16 text-left lg:flex-grow md:w-1/2 lg:mr-20 lg:pr-24 md:pr-16 md:items-start md:text-left md:mb-0 lg:text-center"
             >
-              <h2 className="mb-1 text-xs font-medium tracking-widest text-green-500 title-font">
-                Company Name
+              <h2 className="mb-1 text-md font-medium tracking-widest text-green-500 title-font">
+                FMCA Medical Library
               </h2>
               <h1 className="mb-8 text-2xl font-bold tracking-tighter text-center text-green-800 lg:text-left lg:text-5xl title-font">
                 Welcome to Our Medical Library
@@ -29,26 +29,6 @@ const Home = () => {
                 Browse from the largest collection of medical books. Read from
                 anywhere, at anytime.
               </p>
-
-              <div className="flex justify-center">
-                <Link
-                  to="#"
-                  className="inline-flex items-center font-semibold text-green-700 md:mb-2 lg:mb-0 hover:text-green-400 "
-                >
-                  Learn More
-                  <svg
-                    className="w-4 h-4 ml-2"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="20"
-                    height="20"
-                    fill="currentColor"
-                  >
-                    <path fill="none" d="M0 0h24v24H0z" />
-                    <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" />
-                  </svg>
-                </Link>
-              </div>
             </div>
             <div className="w-5/6 lg:max-w-lg lg:w-full md:w-1/2">
               <img
@@ -83,7 +63,7 @@ const Home = () => {
         <section className="bg-green-700 text-gray-700 body-font">
           <div className="container px-8 py-8 mx-auto lg:px-48">
             <div className="md:flex items-center justify-center ">
-              <div className=" lg:px-10 lg:w-1/2 md:w-full shadow-lg">
+              <div className=" lg:px-10 lg:w-1/2 md:w-full shadow-lg" >
                 <div className="h-full px-4 py-6 border rounded-xl bg-white">
                   <h3 className="tracking-widest text-green-700">Free Plan</h3>
                   <h2 className="flex items-center justify-start mt-2 mb-4 text-3xl font-bold leading-none text-left text-green-700 lg:text-6xl">
@@ -217,7 +197,7 @@ const Home = () => {
         </section>
 
         {/* Testimonial section ends here */}
-          <Footer />
+        <Footer />
       </div>
     );
 }

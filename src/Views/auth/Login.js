@@ -1,9 +1,39 @@
 import React from 'react'
+
 import { Link } from 'react-router-dom'
+
+
+import { connect, useFormik } from 'formik'
+import * as Yup from 'yup'
+
+
 
 import  bookShelfs  from '../../assets/img/lib.jpeg';
 
+
+
+
 const Login = () => {
+  const initialValues = {
+    email: '',
+    password: ''
+  };
+  const onsubmit = values => (
+    console.log('Values', values)
+  )
+  const validationSchema = Yup.object({
+    email: Yup.string()
+      .email("Looks like this is not an email")
+      .required("Email cannot be empty"),
+    password: Yup.string().required("Password cannot be empty"),
+  });
+  
+const formik = useFormik({
+  initialValues,
+  onsubmit,
+  validationSchema,
+});
+console.log('formValues', formik.values)
     return (
       <section className="flex flex-col items-center md:h-screen md:flex-row ">
         <div className="hidden w-full md:h-screen bg-black lg:block md:w-1/3 xl:w-2/3">
@@ -28,7 +58,12 @@ const Login = () => {
             <h1 className="my-5 md:mt-12 text-2xl font-semibold tracking-tighter text-green-700 sm:text-3xl title-font">
               Log in to your account
             </h1>
-            <form className="md:mt-6" action="#" method="POST">
+
+            <form
+              className="md:mt-6"
+              autocomplete="off"
+              onSubmit={formik.handleSubmit}
+            >
               <div>
                 <label
                   htmlFor="email"
@@ -38,14 +73,18 @@ const Login = () => {
                 </label>
                 <input
                   type="email"
-                  name=""
+                  name="email"
                   id="email"
                   placeholder="Your Email "
                   className="w-full px-4 py-2 mt-2 text-base text-green-700 bg-gray-100 border-transparent rounded-lg focus:border-green-500 focus:bg-white focus:ring-0 "
-                  autoFocus
-                  autoComplete="true"
-                  required
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.email}
+                  autocomplete="false"
                 />
+                {formik.touched.email && formik.errors.email ? (
+                  <div className="text-red-900">{formik.errors.email}</div>
+                ) : null}
               </div>
               <div className="mt-4">
                 <label
@@ -56,13 +95,19 @@ const Login = () => {
                 </label>
                 <input
                   type="password"
-                  name=""
+                  name="password"
                   id="password"
                   placeholder="Your Password"
-                  minLength="6"
                   className="w-full px-4 py-2 text-base text-green-700 bg-gray-100 border-transparent rounded-lg focus:border-green-500 focus:bg-white focus:ring-0"
+                  onChange={formik.handleChange}
                   required
+                  onBlur={formik.handleBlur}
+                  value={formik.values.password}
+                  autocomplete="false"
                 />
+                {formik.touched.password && formik.errors.password ? (
+                  <div className="text-red-900">{formik.errors.password}</div>
+                ) : null}
               </div>
               <div className="mt-2 text-right">
                 <Link
@@ -79,6 +124,7 @@ const Login = () => {
                 Log In
               </button>
             </form>
+
             <hr className="w-full my-6 border-gray-300" />
 
             <p className="mt-8 text-center">
@@ -96,4 +142,4 @@ const Login = () => {
     );
 }
 
-export default Login
+export default connect()(Login)

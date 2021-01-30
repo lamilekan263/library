@@ -1,132 +1,152 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import BookReading from '../../assets/img/bookReading.jpeg'
+
+import { Field, Form, Formik, ErrorMessage } from "formik";
+import * as Yup from "yup";
+// import { Link } from 'react-router-dom'
+// import BookReading from '../../assets/img/bookReading.jpeg'
 
 const Register = () => {
+   const initialValues = {
+     firstName : "",
+     lastName : "",
+     email: "",
+     password: "",
+     passwordConfirm: ""
+   };
+   const onSubmit = (values) => console.log("Values", values);
+   const validationSchema = Yup.object({
+     firstName : Yup.string().required("First name cant't be empty"),
+     lastName: Yup.string().required("Last name can't be empty"),
+     email: Yup.string()
+       .email("Looks like this is not an email")
+       .required("Email cannot be empty"),
+      password: Yup.string().required('Password is required'),
+  passwordConfirm: Yup.string()
+     .oneOf([Yup.ref('password'), null], 'Passwords must match')
+});
+   
     return (
-      <section className="flex flex-col my-7 md:h-screen md:flex-row">
-        <div className="container mx-auto">
-          <div className="flex justify-center px-2 py-6 ">
-            <div className="flex w-full rounded-lg xl:w-3/4 lg:w-11/12 lg:shadow-xl ">
-              <div className="relative hidden w-full h-auto bg-cover border-r rounded-l-lg bg-green-1300 lg:block lg:w-6/12">
-                <div className="relative z-7 m-12 text-left ">
-                  <Link
-                    to="#"
-                    className="flex items-center w-32 font-medium text-gray-900 title-font md:mb-6"
-                  >
-                    <img src={BookReading} alt="" />
-                  </Link>
-                  <h2 className="mt-12 mb-2 text-2xl font-semibold tracking-tighter text-green-700 sm:text-3xl title-font">
-                    Create an account.
-                  </h2>
-                  <div className="w-full mt-16 mb-8 text-base leading-relaxed text-gray-900 sm:md:w-3/3 lg:text-1xl ">
-                    We are Happy to Have you here
-                  </div>
-                </div>
-              </div>
-              <div className="w-full px-8 py-24 border-gray-100 rounded-lg bg-green-1300 lg:w-8/12 lg:px-24 lg:py-4 lg:rounded-l-none s">
-                <div className="relative z-7 text-left ">
-                  <Link
-                    to="#"
-                    className="flex items-center w-32 mb-4 font-medium text-gray-900 title-font md:mb-0"
-                  >
-                    <img
-                      src="https://fmcabeokuta.net/wp-content/uploads/LOGO-150x150.jpg"
-                      alt="logo"
-                      className="hidden md:block h-12 md:h-16"
+      <div>
+        {/* start */}
+
+        <div className="grid min-h-screen place-items-center">
+          <div className="w-11/12 p-12 bg-white sm:w-8/12 md:w-1/2 lg:w-5/12">
+            <h1 className="text-xl font-semibold">
+              Hello there 👋,{" "}
+              <span className="font-normal">
+                please fill in your information to continue
+              </span>
+            </h1>
+            <Formik
+              initialValues={initialValues}
+              validationSchema={validationSchema}
+              onSubmit={onSubmit}
+            >
+              <Form className="mt-6" autoComplete="off">
+                <div className="flex justify-between gap-3">
+                  <span className="w-1/2">
+                    <label
+                      htmlFor="firstName"
+                      className="block text-xs font-semibold text-gray-600 uppercase"
+                    >
+                      Firstname
+                    </label>
+                    <Field
+                      id="firstName"
+                      type="text"
+                      name="firstName"
+                      placeholder="John"
+                      autoComplete="given-name"
+                      className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
+                      required
                     />
-                  </Link>
-                  <h1 className="my-5 md:mt-12 text-2xl md:hidden font-semibold tracking-tighter text-green-700 sm:text-3xl title-font">
-                    Create an account.
-                  </h1>
-                  <form className="mt-6" action="#" method="POST">
-                    <div>
-                      <label className="block text-base font-medium leading-relaxed text-gray-700">
-                        User Name
-                      </label>
-                      <input
-                        type="text"
-                        name=""
-                        id=""
-                        placeholder="Your User Name "
-                        className="w-full px-4 py-2 mt-2 text-base bg-gray-100 border-transparent rounded-lg ext-green-700 focus:border-gray-500"
-                        autoFocus
-                        autoComplete="true"
-                        required
-                      />
-                    </div>
-                    <div className="mt-4">
-                      <label className="block text-base font-medium leading-relaxed text-gray-700">
-                        Email Address
-                      </label>
-                      <input
-                        type="email"
-                        name=""
-                        id=""
-                        placeholder="Your Email "
-                        className="w-full px-4 py-2 mt-2 text-base bg-gray-100 border-transparent rounded-lg ext-green-700 focus:border-gray-500"
-                        autoFocus
-                        autoComplete="true"
-                        required
-                      />
-                    </div>
-                    <div className="flex flex-wrap mt-4 mb-6 -mx-3">
-                      <div className="w-full px-3 mb-6 md:w-1/2 md:mb-0">
-                        <label
-                          className="text-base font-medium leading-relaxed text-gray-700"
-                          htmlFor="password"
-                          minLength="6"
-                        >
-                          Password
-                        </label>
-                        <input
-                          className="block w-full px-4 py-2 mt-2 text-base text-green-700 bg-gray-100 border-transparent rounded-lg ext-green-700 focus:border-gray-500"
-                          id="password"
-                          type="text"
-                          placeholder="Your Password"
-                        />
-                        <p className="mt-1 text-xs italic text-green-500">
-                          Please fill out this field.
-                        </p>
-                      </div>
-                      <div className="w-full px-3 md:w-1/2">
-                        <label
-                          className="text-base font-medium leading-relaxed text-gray-700"
-                          htmlFor="confirm"
-                        >
-                          Confirm
-                        </label>
-                        <input
-                          className="block w-full px-4 py-2 mt-2 text-base text-green-700 bg-gray-100 border-transparent rounded-lg ext-green-700 focus:border-gray-500 "
-                          id="confirm"
-                          type="text"
-                          placeholder="Confirm"
-                        />
-                      </div>
-                    </div>
-                    <button
-                      type="submit"
-                      className="block w-full px-4 py-3 mt-6 font-semibold text-white transition duration-500 ease-in-out transhtmlForm rounded-lg bg-gradient-to-r from-green-700 hover:from-green-500 to-green-500 hover:to-green-700 focus:shadow-outline focus:outline-none"
+                    <ErrorMessage name="firstName" />
+                  </span>
+                  <span className="w-1/2">
+                    <label
+                      htmlFor="lastName"
+                      className="block text-xs font-semibold text-gray-600 uppercase"
                     >
-                     Sign Up
-                    </button>
-                  </form>
-                  <p className="mt-8 text-center">
-                    Already have an account?{" "}
-                    <Link
-                      to="/user/login"
-                      className="font-semibold text-green-500 hover:text-green-700"
-                    >
-                      Sign In
-                    </Link>
-                  </p>
+                      Lastname
+                    </label>
+                    <Field
+                      id="lastName"
+                      type="text"
+                      name="lastName"
+                      placeholder="Doe"
+                      autoComplete="family-name"
+                      className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
+                      required
+                    />
+                    <ErrorMessage name="lastName" />
+                  </span>
                 </div>
-              </div>
-            </div>
+                <label
+                  htmlFor="email"
+                  className="block mt-2 text-xs font-semibold text-gray-600 uppercase"
+                >
+                  E-mail
+                </label>
+                <Field
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="john.doe@company.com"
+                  autoComplete="email"
+                  className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
+                  required
+                />
+                <ErrorMessage name="email" />
+                <label
+                  htmlFor="password"
+                  className="block mt-2 text-xs font-semibold text-gray-600 uppercase"
+                >
+                  Password
+                </label>
+                <Field
+                  id="password"
+                  type="password"
+                  name="password"
+                  placeholder="********"
+                  autoComplete="new-password"
+                  className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
+                  required
+                />
+                <ErrorMessage name="password" />
+                <label
+                  htmlFor="password-confirm"
+                  className="block mt-2 text-xs font-semibold text-gray-600 uppercase"
+                >
+                  Confirm password
+                </label>
+                <Field
+                  id="passwordConfirm"
+                  type="password"
+                  name="passwordConfirm"
+                  placeholder="********"
+                  autoComplete="new-password"
+                  className="block w-full p-3 mt-2 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
+                  required
+                />
+                <ErrorMessage name="passwordConfirm" />
+                <button
+                  type="submit"
+                  className="w-full py-3 mt-6 font-medium tracking-widest text-white uppercase bg-green-700 shadow-lg focus:outline-none hover:bg-gray-900 hover:shadow-none"
+                >
+                  Next
+                </button>
+                <p className="flex justify-between inline-block mt-4 text-xs text-gray-500 cursor-pointer hover:text-black">
+                  Already registered?
+                </p>
+              </Form>
+            </Formik>
           </div>
         </div>
-      </section>
+        {/* Fiinish */}
+      </div>
     );
 }
 
 export default Register
+
+
