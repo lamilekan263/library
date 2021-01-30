@@ -4,18 +4,18 @@ import Search from '../components/Search';
 
 const UserList = () => {
     const [ users, setUsers] = useState([]);
-    const [ loading, setLoading] = useState(false)
+    const [ , setLoading] = useState(false)
     useEffect(() => {
-
-        const fetchUsers = async () => {
-            setLoading(true)
-            const response = await  Axios.get('https://jsonplaceholder.typicode.com/users');
-            setUsers(response.data)
-            setLoading(false)
-
-        }
-        fetchUsers()
-    }, [])
+      const fetchUsers = async () => {
+        setLoading(true);
+        const response = await Axios.get(
+          "https://jsonplaceholder.typicode.com/users"
+        );
+        setUsers(response.data);
+        setLoading(false);
+      };
+      fetchUsers();
+    }, [setLoading]);
   //  filter 
 
     return (

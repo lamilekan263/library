@@ -1,5 +1,5 @@
 import React from 'react'
-import Menu from './Menu'
+import Menu from './AdminMenu'
 import ChangePassword from './pages/ChangePassword'
 
 import Header from './Header'

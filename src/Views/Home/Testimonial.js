@@ -27,7 +27,7 @@ const Testimonial = () => {
                   who have availed themselves of the opportunity domiciled in
                   her operation."
                 </p>
-                <a className="flex flex-wrap items-center mt-6">
+                <a className="flex flex-wrap items-center mt-6" href="/">
                   <img
                     alt="testimonial"
                     className="inline-block object-cover object-center w-16 h-16 mb-4 rounded-full bg-4gray-100"
@@ -57,7 +57,7 @@ const Testimonial = () => {
                   blunt. Pressure flip Streetstyle in Tempe mute-air judo air
                   backside fastplant yeah. ".
                 </p>
-                <a className="flex flex-wrap items-center mt-6" href="#">
+                <a className="flex flex-wrap items-center mt-6" href="/">
                   <img
                     alt="testimonial"
                     className="inline-block object-cover object-center w-16 h-16 mb-4 rounded-full bg-4gray-100"
@@ -84,7 +84,7 @@ const Testimonial = () => {
                   blunt. Pressure flip Streetstyle in Tempe mute-air judo air
                   backside fastplant yeah. ".
                 </p>
-                <a className="flex flex-wrap items-center mt-6" href="#">
+                <a className="flex flex-wrap items-center mt-6" href="/">
                   <img
                     alt="testimonial"
                     className="inline-block object-cover object-center w-16 h-16 mb-4 rounded-full bg-4gray-100"

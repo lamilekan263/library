@@ -1,9 +1,9 @@
-import React, {useEffect, useState, Suspense, lazy} from 'react';
+import React, { Suspense, lazy} from 'react';
 import { Route, Switch } from 'react-router-dom'
-import Menu from './components/menu/Menu';
+//import Menu from './components/menu/Menu';
 
  //import Footer from "./components/footer/Footer";
-import Nav from "./components/Nav/Nav";
+//import Nav from "./components/Nav/Nav";
 import SpinnerComponent from './components/spinner/Spinner';
 
 
@@ -19,20 +19,20 @@ const Resources = lazy(() => import("./Views/resource/Resources"));
 const Admin = lazy(() => import("./Views/admin/Admin"));
 
 function App() {
-   const [menuOpen, isMenuOpen] = useState(false);
+  //  const [menuOpen, isMenuOpen] = useState(false);
 
-   const menuController = () => isMenuOpen(!menuOpen);
+  //  const menuController = () => isMenuOpen(!menuOpen);
 
-   useEffect(() => {
-     const menuCheck = () => {
-       if (window.innerWidth > 760) {
-         isMenuOpen(false);
-       }
-     };
-     window.addEventListener("resize", menuCheck);
+  //  useEffect(() => {
+  //    const menuCheck = () => {
+  //      if (window.innerWidth > 760) {
+  //        isMenuOpen(false);
+  //      }
+  //    };
+  //    window.addEventListener("resize", menuCheck);
 
-     return () => window.removeEventListener("resize", menuCheck);
-   }, [isMenuOpen]);
+  //    return () => window.removeEventListener("resize", menuCheck);
+  //  }, [isMenuOpen]);
   return (
     <Suspense fallback={<SpinnerComponent />}>
       <div className="App">
